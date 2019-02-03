@@ -1,0 +1,77 @@
+{
+  "ImbuedPendant": {
+    "NAME": "Imbued Pendant",
+    "FLAVOR": "Everyone gets one at Monk orientation.",
+    "DESCRIPTIONS": ["At the start of each combat, gain 1 #yKi."]
+  },
+  "GreenJuice": {
+    "NAME": "Green Juice",
+    "FLAVOR": "It cleanses your system. Also, it's vegan.",
+    "DESCRIPTIONS": ["At the start of each combat, gain 3 #yRegen."]
+  },
+  "BrassKnuckles": {
+    "NAME": "Brass Knuckles",
+    "FLAVOR": "Did you really think I was fighting these Elites unarmed?",
+    "DESCRIPTIONS": ["Every time you play 3 Attacks in a single turn, heal 3 HP."]
+  },
+  "JadeIdol": {
+    "NAME": "Jade Idol",
+    "FLAVOR": "Oooooh. Shiny.",
+    "DESCRIPTIONS": ["At the start of each combat, increase you #yKi limit by 1."]
+  },
+  "SatinRobe": {
+    "NAME": "Satin Robe",
+    "FLAVOR": "Tithing is hard.",
+    "DESCRIPTIONS": ["You can no longer possess gold. Lose ALL gold. At the start of each turn, gain 5 #yKi."]
+  },
+  "SuspiciousFlask": {
+    "NAME": "Suspicious Flask",
+    "FLAVOR": "I don't think that's water.",
+    "DESCRIPTIONS": ["Whenever you use a potion, add a #yCheap #yShot to your hand."]
+  },
+  "Keg": {
+    "NAME": "Keg",
+    "FLAVOR": "Have you seen how much the merchant charges?",
+    "DESCRIPTIONS": ["Whenever you enter a Rest Site, gain 1 random potion ."]
+  },
+  "HolyBook": {
+    "NAME": "Holy Book",
+    "FLAVOR": "A page a day keeps the spirits away.",
+    "DESCRIPTIONS": ["Every 3 turns, gain 2 #yKi"]
+  },
+  "HolySymbol": {
+    "NAME": "Holy Symbol",
+    "FLAVOR": "The power of Ki compels you!",
+    "DESCRIPTIONS": ["Remove all curses from your deck."]
+  },
+  "StainedGlass": {
+    "NAME": "Stained Glass",
+    "FLAVOR": "The only thing a Monk carries that is stained.",
+    "DESCRIPTIONS": ["Whenever you play a power, gain 1 energy."]
+  },
+  "BoStaff": {
+    "NAME": "Bo Staff",
+    "FLAVOR": "Taken from a nasty fight with a turtle.",
+    "DESCRIPTIONS": ["Every time you play 10 Attacks, heal 5 HP"]
+  },
+  "SpiritJar": {
+    "NAME": "Spirit Jar",
+    "FLAVOR": "Why keep fireflies when you can keep life-force?",
+    "DESCRIPTIONS": ["Whenever you kill an enemy, heal 5 HP"]
+  },
+  "Tent": {
+    "NAME": "Tent",
+    "FLAVOR": "Can you believe the other people don't use one of these?",
+    "DESCRIPTIONS": ["Whenever you enter a Rest Site, start the next combat with 3 #yKi"]
+  },
+  "BoxingGloves": {
+    "NAME": "K.O. Gloves",
+    "FLAVOR": "If they don't work, go for the ear!",
+    "DESCRIPTIONS": ["If you win the combat in 3 turns or less, gain 3 Max HP"]
+  },
+  "ChangePurse": {
+    "NAME": "Change Purse",
+    "FLAVOR": "How else are you gonna make a living?",
+    "DESCRIPTIONS": ["Whenever you gain gold, gain 5 bonus gold."]
+  }
+}

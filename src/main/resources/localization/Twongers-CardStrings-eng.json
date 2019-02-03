@@ -1,0 +1,324 @@
+{
+	"_DummyAttack": {
+		"NAME": "Attack",
+		"DESCRIPTION": "Next turn, the enemy intends to attack."
+	},
+	"_DummyNotAttack": {
+		"NAME": "Not Attack",
+		"DESCRIPTION": "Next turn, the enemy does not intend to attack."
+	},
+	"Jab": {
+		"NAME": "Jab",
+		"DESCRIPTION": "Deal !D! damage. Discipline: Apply !M! Vulnerable."
+	},
+	"Assess": {
+		"NAME": "Assess",
+		"DESCRIPTION": "Gain !B! Block. Discipline: Gain !B! Block."
+	},
+	"SteadyPose": {
+		"NAME": "Steady Pose",
+		"DESCRIPTION": "Deal !D! damage. Discipline: Gain !B! Block."
+	},
+	"ThinkAhead": {
+		"NAME": "Think Ahead",
+		"DESCRIPTION": "Gain !M! Ki. NL Discipline: Increase your Ki limit by 2. NL Ethereal NL Exhaust",
+		"UPGRADE_DESCRIPTION": "Gain !M! Ki. NL Discipline: Increase your Ki limit by 2. NL Exhaust"
+	},
+	"Flurry": {
+		"NAME": "Flurry",
+		"DESCRIPTION": "Deal !D! damage Ki times."
+	},
+	"ControlledStrike": {
+		"NAME": "Controlled Strike",
+		"DESCRIPTION": "Deal !D! damage. Discipline: Gain !M! Ki."
+	},
+	"MentalFortitude": {
+		"NAME": "Mental Fortitude",
+		"DESCRIPTION": "This turn, take no damage from self-inflicted sources."
+	},
+	"AdaptiveCombat": {
+		"NAME": "Adaptive Combat",
+		"DESCRIPTION": "At the start of each turn, gain !M! Ki"
+	},
+	"Psychokinesis": {
+		"NAME": "Psychokinesis",
+		"DESCRIPTION": "At the end of your turn, gain Ki equal to any remaining energy."
+	},
+	"Meditate": {
+		"NAME": "Meditate",
+		"DESCRIPTION": "Heal !M! x Ki. NL Exhaust"
+	},
+	"PalmStrike": {
+		"NAME": "Palm Strike",
+		"DESCRIPTION": "Deal !D! damage, draw Ki cards"
+	},
+	"TigerClaw": {
+		"NAME": "Tiger Claw",
+		"DESCRIPTION": "Preparation ( !M! ) NL Deal !D! damage. NL Gain 1 Ki."
+	},
+	"EagleClaw": {
+		"NAME": "Eagle Claw",
+		"DESCRIPTION": "Preparation ( !M! ) NL Deal !D! damage."
+	},
+	"BearClaw": {
+		"NAME": "Bear Claw",
+		"DESCRIPTION": "Preparation ( !M! ) NL Deal !D! damage. NL Gain !B! Block."
+	},
+	"BoloPunch": {
+		"NAME": "Bolo Punch",
+		"DESCRIPTION": "Deal !D! damage. NL Apply Ki x Vulnerable"
+	},
+	"ThumbStrike": {
+		"NAME": "Thumb Strike",
+		"DESCRIPTION": "Deal !D! damage. NL Apply Ki x Weak"
+	},
+	"Cooldown": {
+		"NAME": "Cooldown",
+		"DESCRIPTION": "Exhaust your hand. NL Heal !M! HP. NL Exhaust"
+	},
+	"CripplingBlow": {
+		"NAME": "Crippling Blow",
+		"DESCRIPTION": "Deal !D! Damage. NL Apply !M! Vulnerable. NL Gain !M! Ki. NL Discipline: Apply !M! Weak."
+	},
+	"CheapShot": {
+		"NAME": "Cheap Shot",
+		"DESCRIPTION": "Deal !D! Damage. NL Exhaust"
+	},
+	"PlannedAttack": {
+		"NAME": "Planned Attack",
+		"DESCRIPTION": "Choose 3 cards from your discard pile and add them to the top of your draw pile"
+	},
+	"RoundhouseKick": {
+		"NAME": "Roundhouse Kick",
+		"DESCRIPTION": "Lose 4 HP. Deal !D! damage to all enemies. NL Discipline: Heal 4 HP."
+	},
+	"Reposition": {
+		"NAME": "Reposition",
+		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Ki. NL Discipline: Gain !M! Ki"
+	},
+	"EmpoweredStrikes": {
+		"NAME": "Empowered Strikes",
+		"DESCRIPTION": "Convert your Ki to Strength. NL Exhaust",
+		"UPGRADE_DESCRIPTION": "Convert your Ki to Strength."
+	},
+	"Restoration": {
+		"NAME": "Restoration",
+		"DESCRIPTION": "Convert your Ki to Regen. NL Exhaust",
+		"UPGRADE_DESCRIPTION": "Convert your Ki to Regen."
+	},
+	"FinalRush": {
+		"NAME": "Final Rush",
+		"DESCRIPTION": "Preparation ( 1 ): NL Deal !D! Damage. NL Gain 3 Ki."
+	},
+	"TakeABreather": {
+		"NAME": "Take A Breather",
+		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Ki. NL Discipline: Gain 3 Block."
+	},
+	"UnrelentingStrike": {
+		"NAME": "Unrelenting Strike",
+		"DESCRIPTION": "Deal !D! Damage. NL Gain Ki x energy. NL Does not consume your Ki. NL Exhaust"
+	},
+	"HammerBlow": {
+		"NAME": "Hammer Blow",
+		"DESCRIPTION": "Preparation ( 1 ): NL Deal !D! Damage Ki times."
+	},
+	"PracticeMakesPerfect": {
+		"NAME": "Practice Makes Perfect",
+		"DESCRIPTION": "Gain !M! Ki. NL Draw !M! cards."
+	},
+	"Brickbreaker": {
+		"NAME": "Brickbreaker",
+		"DESCRIPTION": "Deal !D! damage, Lose 4 HP. NL Discipline: Deal !D! damage."
+	},
+	"AlignSelf": {
+		"NAME": "Align Self",
+		"DESCRIPTION": "Gain X Ki. NL Gain X Buffer. NL Exhaust",
+		"UPGRADE_DESCRIPTION": "Gain X+1 Ki. NL Gain X+1 Buffer NL Exhaust"
+	},
+	"Mantra": {
+		"NAME": "Mantra",
+		"DESCRIPTION": "Heal !M! HP for each excess Ki you generate."
+	},
+	"ResourcefulThinking": {
+		"NAME": "Resourceful Thinking",
+		"DESCRIPTION": "Whenever you gain Ki, draw !M! card."
+	},
+	"Transcendence": {
+		"NAME": "Transcendence",
+		"DESCRIPTION": "Gain Ki x energy. NL Draw Ki x card(s). NL Exhaust"
+	},
+	"Empower": {
+		"NAME": "Empower",
+		"DESCRIPTION": "Increase your Ki limit by !M!."
+	},
+	"EnlightenedBeing": {
+		"NAME": "Enlightened Being",
+		"DESCRIPTION": "Gain !M! Regen.",
+		"UPGRADE_DESCRIPTION": "Gain !M! Regen NL Innate"
+	},
+	"MuscleMemory": {
+		"NAME": "Muscle Memory",
+		"DESCRIPTION": "Deal !D! Damage. NL Discipline: Gain !M! energy."
+	},
+	"NimbleFeet": {
+		"NAME": "Nimble Step",
+		"DESCRIPTION": "Gain !B! Block. NL Heal !M! HP."
+	},
+	"AllIn": {
+		"NAME": "All In",
+		"DESCRIPTION": "Preparation ( !M! ) NL Lose 10 HP. NL Deal !D! damage to all enemies. NL Discipline: Heal 5 HP"
+	},
+	"Balance": {
+		"NAME": "Balance",
+		"DESCRIPTION": "Gain !M! Ki. NL Exhaust"
+	},
+	"InnerFire": {
+		"NAME": "Inner Fire",
+		"DESCRIPTION": "Lose !M! HP. NL Deal !D! damage. NL Discipline: Gain 3 Regen."
+	},
+	"ForearmBlock": {
+		"NAME": "Forearm Block",
+		"DESCRIPTION": "Lose !M! HP. NL Gain !B! Block."
+	},
+	"SideKick": {
+		"NAME": "Side Kick",
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+	},
+	"Grapple": {
+		"NAME": "Grapple",
+		"DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. NL Gain 2 Ki."
+	},
+	"OpportunityAttack": {
+		"NAME": "Opportunity Attack",
+		"DESCRIPTION": "Discipline: Lose !M! HP. NL Deal !D! damage. NL Ethereal."
+	},
+	"Masochist": {
+		"NAME": "Masochist",
+		"DESCRIPTION": "Whenever you lose HP, gain 1 Ki."
+	},
+	"ShadowFist": {
+		"NAME": "Shadow Grasp",
+		"DESCRIPTION": "Deal 1 damage for each Ki gained this combat. NL ( !D! )."
+	},
+	"JungleStance": {
+		"NAME": "Jungle Stance",
+		"DESCRIPTION": "Gain !B! Block Ki times."
+	},
+	"RootedStance": {
+		"NAME": "Rooted Stance",
+		"DESCRIPTION": "Gain !B! Block Ki times."
+	},
+	"KiBlade": {
+		"NAME": "Ki Blade",
+		"DESCRIPTION": "Deal !D! damage. Permanently increase this card's damage by Ki. NL Exhaust"
+	},
+	"Overextend": {
+		"NAME": "Overextend",
+		"DESCRIPTION": "Preparation ( !M! ) NL Gain 3 energy, draw 2 cards."
+	},
+	"LotusKick": {
+		"NAME": "Lotus Kick",
+		"DESCRIPTION": "Deal !D! damage Ki times to all enemies. NL Discipline: Do not consume your Ki. NL Exhaust"
+	},
+	"SurgingBlow": {
+		"NAME": "Surging Blow",
+		"DESCRIPTION": "Preparation ( 2 ) NL Deal !D! damage. NL Gain !M! Ki. NL Heal !M! HP."
+	},
+	"Backhand": {
+		"NAME": "Backhand",
+		"DESCRIPTION": "Apply !M! Weak. NL Discipline: Gain !M! Regen. NL Exhaust."
+	},
+	"ElbowStrike": {
+		"NAME": "Elbow Strike",
+		"DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Discpline: Prep ( 1 ) NL Repeat.",
+		"UPGRADE_DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak. NL Prep ( 1 ) NL Repeat."
+	},
+	"RapidResponse": {
+		"NAME": "Rapid Response",
+		"DESCRIPTION": "Preparation ( 1 ) NL Deal !D! damage twice. NL Heal !M! HP. NL Apply 2 Vulnerable."
+	},
+	"CalculatedStrike": {
+		"NAME": "Calculated Strike",
+		"DESCRIPTION": "Deal !D! damage. NL Discipline: Lose !M! HP NL Deal !D! damage."
+	},
+	"ExtremeFocus": {
+		"NAME": "Extreme Focus",
+		"DESCRIPTION": "Preparation ( !M! ) NL Lose ALL Ki and Regen. NL Gain 3 Intangible. NL Exhaust"
+	},
+	"ShadowRestore": {
+		"NAME": "Shadow Restore",
+		"DESCRIPTION": "Heal 1 HP for each Ki gained this combat NL ( !M! ). NL Exhaust"
+	},
+	"ShadowBlock": {
+		"NAME": "Shadow Block",
+		"DESCRIPTION": "Gain 1 Block for each Ki gained this combat NL ( !B! )."
+	},
+	"AllOrNothing": {
+		"NAME": "All Or Nothing",
+		"DESCRIPTION": "Costs 1 less for each Ki gained this combat. NL Deal 50 damage to all enemies. NL Exhaust"
+	},
+	"KickUp": {
+		"NAME": "Kick Up",
+		"DESCRIPTION": "Gain 1 Dexterity. NL Gain 2 Ki. NL Exhaust"
+	},
+	"PsycheUp": {
+		"NAME": "Psyche Up",
+		"DESCRIPTION": "Gain !B! Block. NL Remove all stacks of Preparation."
+	},
+	"Kiai": {
+		"NAME": "Kiai",
+		"DESCRIPTION": "ALL enemies lose !M! Strength. NL Exhaust"
+	},
+	"SpiritBarrier": {
+		"NAME": "Spirit Barrier",
+		"DESCRIPTION": "Costs 1 less for each Ki gained this combat. NL Gain !B! Block."
+	},
+	"AbruptRest": {
+		"NAME": "Abrupt Rest",
+		"DESCRIPTION": "Preparation ( !M! ) NL Gain !B! Block. NL Heal 8 HP."
+	},
+	"MasterOfPain": {
+		"NAME": "Master Of Pain",
+		"DESCRIPTION": "Your self-inflicted damage is reduced by 50%"
+	},
+	"ApothicBrew": {
+		"NAME": "Apothic Brew",
+		"DESCRIPTION": "Gain !M! Regen."
+	},
+	"ClotWounds": {
+		"NAME": "Clot Wounds",
+		"DESCRIPTION": "At the end of your turn, heal !M! HP."
+	},
+	"BraceForImpact": {
+		"NAME": "Brace For Impact",
+		"DESCRIPTION": "Gain !B! Block. Gain 3 Ki. NL Discipline: NL Preparation ( !M! ) NL Gain !B! Block."
+	},
+	"Pin": {
+		"NAME": "Pin",
+		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Ki. NL Discipline: Gain 2 Ki."
+	},
+	"DoubleUp": {
+		"NAME": "Double Up",
+		"DESCRIPTION": "Preparation ( !M! ) NL Deal !D! damage twice. NL Discipline: Gain 2 Ki."
+	},
+	"PushThrough": {
+		"NAME": "Push Through",
+		"DESCRIPTION": "Whenever you receive attack damage, gain !M! Block next turn."
+	},
+	"ChannelSpirit": {
+		"NAME": "Channel Spirit",
+		"DESCRIPTION": "Preparation ( !M! ): NL Choose a card, reduce its cost by 5 this turn."
+	},
+	"Atonement": {
+		"NAME": "Atonement",
+		"DESCRIPTION": "Lose 4 HP. NL Gain !M! Ki. NL Draw 1 Card."
+	},
+	"Strike_M": {
+		"NAME": "Punch",
+		"DESCRIPTION": "Deal !D! damage. NL Gain !M! Ki."
+	},
+	"Defend_M": {
+		"NAME": "Block",
+		"DESCRIPTION": "Gain !B! Block."
+	}
+}

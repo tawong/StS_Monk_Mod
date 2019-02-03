@@ -1,0 +1,50 @@
+{
+  "KiPower": {
+    "NAME": "Ki",
+    "DESCRIPTIONS": ["You've stored #b", " #yKi."]
+  },
+  "ResiliencePower": {
+    "NAME": "Resilience",
+    "DESCRIPTIONS": ["This turn, self-inflicted damage is reduced by 50%"]
+  },
+  "GainKiPower": {
+    "NAME": "Ki Up",
+    "DESCRIPTIONS": ["At the start of your turn, gain #b", " #yKi."]
+  },
+  "PsychokinesisPower": {
+    "NAME": "Psychokinesis",
+    "DESCRIPTIONS": ["At the end of your turn, gain Ki equal to any remaining energy"]
+  },
+  "PreparationPower": {
+    "NAME": "Preparation",
+    "DESCRIPTIONS": ["At the start of your next turn, lose #b", " energy"]
+  },
+  "MantraPower": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": ["Heal #b", " HP for each excess #yKi you generate."]
+  },
+  "ResourcefulThinkingPower": {
+    "NAME": "Resourceful Thinking",
+    "DESCRIPTIONS": ["Whenever you gain #yKi, draw #b", " card(s)."]
+  },
+  "EmpowerPower": {
+    "NAME": "Empower",
+    "DESCRIPTIONS": ["Your #yKi limit is increased by #b", " NL Your current #yKi limit is #b"]
+  },
+  "MasochistPower": {
+    "NAME": "Masochist",
+    "DESCRIPTIONS": ["Whenever you lose HP, gain #b" , " #yKi"]
+  },
+  "MasterOfPainPower": {
+    "NAME": "Master Of Pain",
+    "DESCRIPTIONS": ["Your self-inflicted damage is reduced by 50%"]
+  },
+  "ClotWoundsPower": {
+    "NAME": "Clotting Wounds",
+    "DESCRIPTIONS": ["At the end of your turn, heal #b" , " HP."]
+  },
+  "PushThroughPower": {
+    "NAME": "Pushing Through",
+    "DESCRIPTIONS": ["Whenever you receive attack damage, gain #b" , " block next turn."]
+  }
+}
