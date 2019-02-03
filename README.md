@@ -42,7 +42,7 @@ This class adds 3 new keywords to the game.
 2. Thanks to [kiooeht](https://github.com/kiooeht) and contributors of ModTheSpire!!
 3. Thanks to the [devs](https://www.megacrit.com/) of **SlayTheSpire** 
 4. Thanks to you - if you are reading this, have decided to play the mod, or have given feedback on it!
-5. Thank to [BlackRuse](https://github.com/lionpkqq/StS-BlackRuseMod) for their mod which inspired me to make my own. 
+5. Thank to [BlackRuse](https://github.com/lionpkqq/StS-BlackRuseMod) for their mod which inspired me to make my own. (There's a bit of your code in here somewhere! Also for placeholder images).
 6. Thanks to [fiiiiilth](https://github.com/fiiiiilth) who's nice `README` inspired me to have some sort of structure here. (Much of this README is partially borrowed)
 7. Thanks to SunnyBundles, and BigBootyJudy for testing when it *really sucked*.
 
