@@ -6,6 +6,8 @@ Created by twongers.
 ## The Monk
 The Monk is a *(slightly alcoholic)* disciple of ancient martial arts. Store and consume **Ki** to empower your attacks with powerful bonuses! The Monk is a class that requires complex card and resource management to master.
 
+![Image of cards with the new monk keywords](https://raw.githubusercontent.com/tawong/StS_Monk_Mod/master/examples/card-splash.jpg)
+
 This class adds 3 new keywords to the game. 
 
 **Ki:** Ki is generated through attacks and skills and is eventually expended to imbue your attacks with spiritual magic.
@@ -42,6 +44,7 @@ This class adds 3 new keywords to the game.
 4. Thanks to you - if you are reading this, have decided to play the mod, or have given feedback on it!
 5. Thank to [BlackRuse](https://github.com/lionpkqq/StS-BlackRuseMod) for their mod which inspired me to make my own. 
 6. Thanks to [fiiiiilth](https://github.com/fiiiiilth) who's nice `README` inspired me to have some sort of structure here. (Much of this README is partially borrowed)
+7. Thanks to SunnyBundles, and BigBootyJudy for testing when it *really sucked*.
 
 ## Other Mods ##
 Everyone who mods this game loves it as much as I do. Head over to the Steam Workshop and try out ALL THE CHARACTERS!
