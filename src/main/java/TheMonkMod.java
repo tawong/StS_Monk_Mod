@@ -160,6 +160,9 @@ public class TheMonkMod implements PostInitializeSubscriber,
 		BaseMod.addRelicToCustomPool(new StainedGlass(), AbstractCardEnum.VIRIDIAN);
 		BaseMod.addRelicToCustomPool(new SuspiciousFlask(), AbstractCardEnum.VIRIDIAN);
 		BaseMod.addRelicToCustomPool(new Tent(), AbstractCardEnum.VIRIDIAN);
+		BaseMod.addRelicToCustomPool(new Wallet(), AbstractCardEnum.VIRIDIAN);
+		BaseMod.addRelicToCustomPool(new Champagne(), AbstractCardEnum.VIRIDIAN);
+		BaseMod.addRelicToCustomPool(new Celery(), AbstractCardEnum.VIRIDIAN);
 
         logger.info("done editing relics");
 	}
@@ -174,7 +177,7 @@ public class TheMonkMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new EagleClaw());
 		BaseMod.addCard(new Meditate());
 		BaseMod.addCard(new PalmStrike());
-		BaseMod.addCard(new Jab());
+		BaseMod.addCard(new Wallop());
 		BaseMod.addCard(new Psychokinesis());
 		BaseMod.addCard(new AdaptiveCombat());
 		BaseMod.addCard(new ControlledStrike());
@@ -182,7 +185,7 @@ public class TheMonkMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new SteadyPose());
 		BaseMod.addCard(new ThinkAhead());
 		BaseMod.addCard(new Flurry());
-		BaseMod.addCard(new MentalFortitude());
+		BaseMod.addCard(new Dilate());
 		BaseMod.addCard(new BoloPunch());
 		BaseMod.addCard(new ThumbStrike());
 		BaseMod.addCard(new Cooldown());
@@ -204,7 +207,7 @@ public class TheMonkMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new ResourcefulThinking());
 		BaseMod.addCard(new Transcendence());
 		BaseMod.addCard(new Empower());
-		BaseMod.addCard(new EnlightenedBeing());
+		BaseMod.addCard(new PrimalForm());
 		BaseMod.addCard(new MuscleMemory());
 		BaseMod.addCard(new NimbleFeet());
 		BaseMod.addCard(new AllIn());
@@ -222,7 +225,8 @@ public class TheMonkMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new KiBlade());
 		BaseMod.addCard(new SurgingBlow());
 		BaseMod.addCard(new Backhand());
-		BaseMod.addCard(new ElbowStrike());
+//		BaseMod.addCard(new ElbowStrike());
+		BaseMod.addCard(new LotusKick());
 		BaseMod.addCard(new LotusKick());
 		BaseMod.addCard(new CalculatedStrike());
 		BaseMod.addCard(new RapidResponse());
@@ -236,18 +240,23 @@ public class TheMonkMod implements PostInitializeSubscriber,
 		BaseMod.addCard(new MasterOfPain());
 		BaseMod.addCard(new Kiai());
 		BaseMod.addCard(new PsycheUp());
-		BaseMod.addCard(new ApothicBrew());
+		BaseMod.addCard(new RecklessPursuit());
 		BaseMod.addCard(new BraceForImpact());
 		BaseMod.addCard(new ClotWounds());
-		BaseMod.addCard(new Pin());
+//		BaseMod.addCard(new Pin());
 		BaseMod.addCard(new ExtremeFocus());
-		BaseMod.addCard(new DoubleUp());
+		BaseMod.addCard(new BadgerClaw());
 		BaseMod.addCard(new KickUp());
 		BaseMod.addCard(new PushThrough());
 		BaseMod.addCard(new ChannelSpirit());
 		BaseMod.addCard(new Atonement());
 		BaseMod.addCard(new Strike_M());
 		BaseMod.addCard(new Defend_M());
+		BaseMod.addCard(new DragonClaw());
+		BaseMod.addCard(new PrimalForm());
+		BaseMod.addCard(new BatClaw());
+		BaseMod.addCard(new Divinity());
+		BaseMod.addCard(new QuickShots());
 
 //
 		logger.info("done editting cards");
@@ -300,16 +309,20 @@ public class TheMonkMod implements PostInitializeSubscriber,
 		UnlockTracker.addCard("KickUp");
 
 		// Monk unlock 4
-		BaseMod.addUnlockBundle(new CustomUnlockBundle("ApothicBrew", "ExtremeFocus", "ElbowStrike"), TheMonkEnum.THE_MONK, 3);
-		UnlockTracker.addCard("ApothicBrew");
-		UnlockTracker.addCard("ExtremeFocus");
-		UnlockTracker.addCard("ElbowStrike");
+
+//		BaseMod.addUnlockBundle(new CustomUnlockBundle("BatClaw", "ExtremeFocus", "ChannelSpirit"), TheMonkEnum.THE_MONK, 3);
+//		UnlockTracker.addCard("BatClaw");
+//		UnlockTracker.addCard("ExtremeFocus");
+//		UnlockTracker.addCard("ChannelSpirit");
 
 		// Monk unlock 5
-		BaseMod.addUnlockBundle(new CustomUnlockBundle("EnlightenedBeing", "Psychokinesis", "ThinkAhead"), TheMonkEnum.THE_MONK, 4);
-		UnlockTracker.addCard("EnlightenedBeing");
-		UnlockTracker.addCard("Psychokinesis");
-		UnlockTracker.addCard("ThinkAhead");
+
+//		BaseMod.addUnlockBundle(new CustomUnlockBundle(
+//				AbstractUnlock.UnlockType.RELIC, "Wallet", "Champagne", "Celery"
+//		), TheMonkEnum.THE_MONK, 4);
+//		UnlockTracker.addRelic("Wallet");
+//		UnlockTracker.addRelic("Champagne");
+//		UnlockTracker.addRelic("Celery");
 	}
 	
 
@@ -323,7 +336,7 @@ public class TheMonkMod implements PostInitializeSubscriber,
         BaseMod.addKeyword(new String[] {"Resilience", "resilience"}, "This turn, self-inflicted damage is reduced by 50%");
         BaseMod.addKeyword(new String[] {"Preparation", "preparation", "Preparation:", "preparation", "prep", "Prep"}, "Energy is reduced by this amount next turn.");
         BaseMod.addKeyword(new String[] {"Mantra", "mantra"}, "Heal HP for excess Ki you generate.");
-//        BaseMod.addKeyword(new String[] {"Backlash", "backlash"}, "Apply #b1 #yWeak, #yVulnerable AND #yFrail to you.");
+        BaseMod.addKeyword(new String[] {"Empower", "empower"}, "Each stack of empower increases your maximum Ki limit by 1.");
 //        BaseMod.addKeyword(new String[] {"Protection", "protection"}, "Whenever you lose HP, lose #yProtection instead. Protection will not be removed at the start of your next turn.");
 //        BaseMod.addKeyword(new String[] {"Elegance", "elegance"}, "Elegance improves Block and Protection gained from cards.");
 //        BaseMod.addKeyword(new String[] {"Matrix", "matrix"}, "Reduce Attack damage taken by #b50%. Lose #b1 Martix whenever you are attacked.");

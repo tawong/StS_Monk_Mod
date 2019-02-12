@@ -23,9 +23,9 @@ public class SideKick extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
 	private static final int ATTACK_DMG = 6;
-	private static final int UPGRADE_ATTACK_DMG =3;
+	private static final int UPGRADE_ATTACK_DMG = 3;
 	private static final int WEAK = 2;
-	private static final int WEAK_UP = 1;
+	private static final int WEAK_UP = 0;
 
 	public SideKick() {
 		super(ID, NAME, "img/cards/sidekick.png", COST, DESCRIPTION, CardType.ATTACK,
@@ -53,7 +53,7 @@ public class SideKick extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeDamage(UPGRADE_ATTACK_DMG);
-			upgradeMagicNumber(WEAK_UP);
+//			upgradeMagicNumber(WEAK_UP);
 		}
 	}
 }

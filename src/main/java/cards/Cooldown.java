@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import patches.AbstractCardEnum;
 import powers.KiPower;
 
@@ -21,16 +22,18 @@ public class Cooldown extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 2;
-	private static final int HEAL_VALUE = 10;
-	private static final int UPGRADE_HEAL = 5;
+	private static final int COST = 3;
+	private static final int COST_UP = 2;
+	private static final int INTANGIBLE = 1;
+	private static final int INTANGIBLE_UP = 1;
+
 
 	public Cooldown() {
 		super(ID, NAME, "img/cards/cooldown.png", COST, DESCRIPTION, CardType.SKILL,
 				AbstractCardEnum.VIRIDIAN, CardRarity.UNCOMMON,
 				CardTarget.SELF);
-		this.baseMagicNumber = this.magicNumber = HEAL_VALUE;
 		this.exhaust = true;
+		this.magicNumber = this.baseMagicNumber = INTANGIBLE;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
@@ -43,7 +46,7 @@ public class Cooldown extends CustomCard {
 			AbstractDungeon.actionManager.addToTop(new ExhaustAction(AbstractDungeon.player, AbstractDungeon.player, 1, true, true));
 	}
 
-		AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, this.magicNumber), this.magicNumber));
 
 	}
 
@@ -54,7 +57,7 @@ public class Cooldown extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(UPGRADE_HEAL);
+			upgradeMagicNumber(INTANGIBLE_UP);
 		}
 	}
 }

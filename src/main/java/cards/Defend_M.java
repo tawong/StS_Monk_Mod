@@ -25,11 +25,11 @@ public class Defend_M extends CustomCard {
 
 	public Defend_M() {
 		super(ID, NAME, "img/cards/defend_m.png", COST, DESCRIPTION, CardType.SKILL,
-				AbstractCardEnum.VIRIDIAN, CardRarity.COMMON,
+				AbstractCardEnum.VIRIDIAN, CardRarity.BASIC,
 				CardTarget.SELF);
 		this.baseBlock = BLOCK;
 
-		tags.add(BaseModCardTags.BASIC_STRIKE);
+		this.tags.add(BaseModCardTags.BASIC_DEFEND);
 
 
 	}

@@ -4,6 +4,7 @@ package cards;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import patches.AbstractCardEnum;
 import powers.KiPower;
+import powers.PreparationPower;
 
 public class Reposition extends CustomCard {
 	public static final String ID = "Reposition";
@@ -22,8 +24,8 @@ public class Reposition extends CustomCard {
 	private static final int COST = 1;
 	private static final int BLOCK = 7;
 	private static final int UPGRADE_BLOCK = 3;
-	private static final int GAIN_KI = 1;
-	private static final int UPGRADE_KI = 1;
+	private static final int LOSE_PREP = 1;
+	private static final int LOSE_PREP_UP = 1;
 
 	public Reposition() {
 		super(ID, NAME, "img/cards/reposition.png", COST, DESCRIPTION, CardType.SKILL,
@@ -31,16 +33,25 @@ public class Reposition extends CustomCard {
 				CardTarget.SELF);
 		this.baseBlock = BLOCK;
 		this.block = BLOCK;
-		this.baseMagicNumber = this.magicNumber = GAIN_KI;
+		this.baseMagicNumber = this.magicNumber = LOSE_PREP;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KiPower(p, this.magicNumber), this.magicNumber));
 
 		if((EnergyPanel.totalCount-this.costForTurn) == 0){
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KiPower(p, GAIN_KI), GAIN_KI));
+			if(p.hasPower("PreparationPower")){
+
+				if(p.getPower("PreparationPower").amount <= this.magicNumber){
+					AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "PreparationPower"));
+
+				}else{
+					AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PreparationPower(p, -this.magicNumber), -this.magicNumber));
+				}
+
+
+			}
 		}
 	}
 
@@ -52,7 +63,7 @@ public class Reposition extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeBlock(UPGRADE_BLOCK);
-			upgradeMagicNumber(UPGRADE_KI);
+			upgradeMagicNumber(LOSE_PREP_UP);
 		}
 	}
 }

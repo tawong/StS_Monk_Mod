@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.RegenPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
@@ -26,10 +27,10 @@ public class InnerFire extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
-	private static final int ATTACK_DMG = 22;
-	private static final int COST_UP = 1;
+	private static final int ATTACK_DMG = 28;
+	private static final int ATTACK_UP = 4;
 	private static final int HP_LOSS = 6;
-	private static final int REGEN = 3;
+	private static final int ART = 1;
 
 
 	public InnerFire() {
@@ -48,7 +49,7 @@ public class InnerFire extends CustomCard {
 
 
 		if((EnergyPanel.totalCount-this.costForTurn) == 0){
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RegenPower(p, REGEN), REGEN));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ArtifactPower(p, ART), ART));
 		}
 	}
 
@@ -61,7 +62,7 @@ public class InnerFire extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(COST_UP);
+			upgradeDamage(ATTACK_UP);
 		}
 	}
 }

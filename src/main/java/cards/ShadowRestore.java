@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RegenPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import patches.AbstractCardEnum;
 
 public class ShadowRestore extends CustomCard {
@@ -34,6 +35,7 @@ public class ShadowRestore extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
 		AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
+
 
 	}
 

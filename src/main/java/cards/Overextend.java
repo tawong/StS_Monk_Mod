@@ -27,22 +27,24 @@ public class Overextend extends CustomCard {
 	private static final int COST = 0;
 	private static final int ENERGY_GAIN = 3;
 	private static final int PREPARATION = 3;
-	private static final int PREP_UP = -1;
+	private static final int DRAW = 3;
+	private static final int DRAW_UP = 2;
+//	private static final int PREP_UP = -1;
 
 	public Overextend() {
 		super(ID, NAME, "img/cards/overextend.png", COST, DESCRIPTION, CardType.SKILL,
 				AbstractCardEnum.VIRIDIAN, CardRarity.UNCOMMON,
 				CardTarget.SELF);
-		this.magicNumber = this.baseMagicNumber = PREPARATION;
+		this.magicNumber = this.baseMagicNumber = DRAW;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PreparationPower(p, this.magicNumber), this.magicNumber));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PreparationPower(p, PREPARATION), PREPARATION));
 
 		AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(ENERGY_GAIN));
 
-		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 2));
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
 
 	}
 
@@ -55,7 +57,7 @@ public class Overextend extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeMagicNumber(PREP_UP);
+			upgradeMagicNumber(DRAW_UP);
 		}
 	}
 }

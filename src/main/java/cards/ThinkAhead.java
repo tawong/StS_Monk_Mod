@@ -24,7 +24,6 @@ public class ThinkAhead extends CustomCard {
 	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 1;
 	private static final int KI = 10;
-	private static final int LIMIT_UP = 2;
 //	private static final int COST_UPGRADE = 1;
 
 	public ThinkAhead() {
@@ -39,9 +38,6 @@ public class ThinkAhead extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-		if((EnergyPanel.totalCount-this.costForTurn) == 0){
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EmpowerPower(p, LIMIT_UP), LIMIT_UP));
-		}
 
 		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KiPower(p, this.magicNumber), this.magicNumber));
 

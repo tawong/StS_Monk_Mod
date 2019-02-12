@@ -30,6 +30,10 @@ public class SpiritJar extends CustomRelic {
 
     }
 
+    public void onVictory() {
+        AbstractDungeon.actionManager.addToTop(new HealAction(AbstractDungeon.player,AbstractDungeon.player, Ki));
+    }
+
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];
     }

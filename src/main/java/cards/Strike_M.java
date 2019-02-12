@@ -30,11 +30,11 @@ public class Strike_M extends CustomCard {
 
 	public Strike_M() {
 		super(ID, NAME, "img/cards/strike_m.png", COST, DESCRIPTION, CardType.ATTACK,
-				AbstractCardEnum.VIRIDIAN, CardRarity.COMMON,
+				AbstractCardEnum.VIRIDIAN, CardRarity.BASIC,
 				CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
-		tags.add(AbstractCard.CardTags.STRIKE);
-		tags.add(BaseModCardTags.BASIC_STRIKE);
+		this.tags.add(AbstractCard.CardTags.STRIKE);
+		this.tags.add(BaseModCardTags.BASIC_STRIKE);
 		this.magicNumber = this.baseMagicNumber = KI;
 	}
 

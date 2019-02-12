@@ -32,7 +32,7 @@ public class MasochistPower extends AbstractPower {
 	public int onLoseHp(int damageAmount) {
 
 		this.flashWithoutSound();
-		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new KiPower(this.owner, this.amount), this.amount));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new KiPower(this.owner, 1), 1));
 		return damageAmount;
 	}
 

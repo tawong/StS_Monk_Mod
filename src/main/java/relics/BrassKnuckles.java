@@ -14,7 +14,7 @@ import powers.KiPower;
 
 public class BrassKnuckles extends CustomRelic {
     private static final String ID = "BrassKnuckles";
-    private static final int HEAL = 3;
+    private static final int HEAL = 2;
 
     public BrassKnuckles() {
         super(ID, ImageMaster.loadImage("img/relics/knuckles.png"), ImageMaster.loadImage("img/relics/outline/knuckles.png"), RelicTier.UNCOMMON, LandingSound.HEAVY);

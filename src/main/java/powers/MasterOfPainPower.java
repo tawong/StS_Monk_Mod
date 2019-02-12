@@ -37,7 +37,7 @@ public class MasterOfPainPower extends AbstractPower {
 	public int onAttacked(DamageInfo info, int damageAmount) {
 		if (info.type == DamageInfo.DamageType.HP_LOSS && info.owner == this.owner && damageAmount > 0 && !this.owner.hasPower("Buffer")) {
 
-			damageAmount *= 0.5f;
+			damageAmount = 0;
 		}
 
 		return damageAmount;

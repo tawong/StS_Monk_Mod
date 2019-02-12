@@ -1,15 +1,20 @@
 package powers;
 
+import cards.*;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class PreparationPower extends AbstractPower {
@@ -31,6 +36,48 @@ public class PreparationPower extends AbstractPower {
 		this.region48 = powerAltas.findRegion("preparation48");
 		this.region128 = powerAltas.findRegion("preparation128");
 
+		if(amount > 0){
+
+			if(AbstractDungeon.player.hasPower("DivinityPower")){
+				int divAmt = AbstractDungeon.player.getPower("DivinityPower").amount;
+				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(divAmt));
+			}
+
+			if(AbstractDungeon.player.hasPower("QuickPower")){
+				int quickAmt = AbstractDungeon.player.getPower("QuickPower").amount;
+				AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(quickAmt, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+			}
+
+
+			if(AbstractDungeon.player.hasPower("PrimalPower")){
+				int primalAmt = AbstractDungeon.player.getPower("PrimalPower").amount;
+
+				for(int i = 0; i < primalAmt; i++) {
+					int randomNum = ThreadLocalRandom.current().nextInt(1, 5 + 1);
+
+
+					if (randomNum == 1) {
+						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new TigerClaw(), 1, false));
+					}
+					if (randomNum == 2) {
+						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new BearClaw(), 1, false));
+					}
+					if (randomNum == 3) {
+						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new BadgerClaw(), 1, false));
+					}
+					if (randomNum == 4) {
+						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new EagleClaw(), 1, false));
+					}
+					if (randomNum == 5) {
+						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new DragonClaw(), 1, false));
+					}
+					if (randomNum == 6) {
+						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new BatClaw(), 1, false));
+					}
+
+				}
+			}
+		}
 
 	}
 
@@ -49,6 +96,50 @@ public class PreparationPower extends AbstractPower {
 	{
 		this.fontScale = 8.0F;
 		this.amount += stackAmount;
+
+//		if(stackAmount > 0){
+//
+//			if(AbstractDungeon.player.hasPower("DivinityPower")){
+//				int divAmt = AbstractDungeon.player.getPower("DivinityPower").amount;
+//				AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(divAmt));
+//			}
+//
+//			if(AbstractDungeon.player.hasPower("QuickPower")){
+//				int quickAmt = AbstractDungeon.player.getPower("QuickPower").amount;
+//				AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(quickAmt, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+//			}
+//
+//
+//			if(AbstractDungeon.player.hasPower("PrimalPower")){
+//				int primalAmt = AbstractDungeon.player.getPower("PrimalPower").amount;
+//
+//				for(int i = 0; i < primalAmt; i++) {
+//					int randomNum = ThreadLocalRandom.current().nextInt(1, 6 + 1);
+//
+//
+//					if (randomNum == 1) {
+//						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new TigerClaw(), 1, false));
+//					}
+//					if (randomNum == 2) {
+//						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new BearClaw(), 1, false));
+//					}
+//					if (randomNum == 3) {
+//						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new BadgerClaw(), 1, false));
+//					}
+//					if (randomNum == 4) {
+//						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new EagleClaw(), 1, false));
+//					}
+//					if (randomNum == 5) {
+//						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new BatClaw(), 1, false));
+//					}
+//					if (randomNum == 6) {
+//						AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new DragonClaw(), 1, false));
+//					}
+//
+//				}
+//			}
+//
+//		}
 
 	}
 

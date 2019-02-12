@@ -27,7 +27,7 @@ public class ResiliencePower extends AbstractPower {
 		this.priority = 0;
 		updateDescription();
 		this.region48 = powerAltas.findRegion("resilience48");
-		this.region128 = powerAltas.findRegion("resilience48");
+		this.region128 = powerAltas.findRegion("resilience128");
 
 	}
 

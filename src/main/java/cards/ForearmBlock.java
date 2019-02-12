@@ -2,6 +2,7 @@ package cards;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -35,6 +36,7 @@ public class ForearmBlock extends CustomCard {
 
 		AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, HP_LOSS));
 		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+		AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
 
 	}
 

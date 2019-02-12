@@ -24,7 +24,7 @@ public class MuscleMemory extends CustomCard {
 	private static final int COST = 1;
 	private static final int DAMAGE = 5;
 	private static final int DAMAGE_UP = 3;
-	private static final int ENERGY_UP = 1;
+	private static final int ENERGY_UP = 2;
 
 	public MuscleMemory() {
 		super(ID, NAME, "img/cards/musclememory.png", COST, DESCRIPTION, CardType.ATTACK,

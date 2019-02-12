@@ -23,7 +23,7 @@ public class EagleClaw extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 0;
-	private static final int ATTACK_DMG = 20;
+	private static final int ATTACK_DMG = 18;
 	private static final int ATTACK_UP = 5;
 	private static final int PREPARATION = 1;
 //	private static final int UPGRADE_PREP = -1;

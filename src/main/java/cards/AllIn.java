@@ -28,11 +28,11 @@ public class AllIn extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 30;
-	private static final int HP_LOSS = 10;
+	private static final int ATTACK_DMG = 32;
+	private static final int HP_LOSS = 6;
 	private static final int PREP = 2;
 	private static final int PREP_UP = -1;
-	private static final int HEAL = 5;
+//	private static final int HEAL = 5;
 
 	public AllIn() {
 		super(ID, NAME, "img/cards/allin.png", COST, DESCRIPTION, CardType.ATTACK,
@@ -53,9 +53,9 @@ public class AllIn extends CustomCard {
 		AbstractDungeon.actionManager.addToBottom(new ShakeScreenAction(0.0F, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.HIGH));
 		AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
-		if((EnergyPanel.totalCount-this.costForTurn) == 0){
-			AbstractDungeon.actionManager.addToBottom(new HealAction(p, p,  HEAL));
-		}
+//		if((EnergyPanel.totalCount-this.costForTurn) == 0){
+//			AbstractDungeon.actionManager.addToBottom(new HealAction(p, p,  HEAL));
+//		}
 
 	}
 

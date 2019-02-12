@@ -37,16 +37,16 @@ public class KiPower extends AbstractPower {
 
 	public void atStartOfTurn(){
 
-		int empower = 0;
-
-		if (AbstractDungeon.player.hasPower("EmpowerPower")) {
-			empower = AbstractDungeon.player.getPower("EmpowerPower").amount;
-		}
-
-		if(empower == 0){
-
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new EmpowerPower(this.owner, 0), 0));
-		}
+//		int empower = 0;
+//
+//		if (AbstractDungeon.player.hasPower("EmpowerPower")) {
+//			empower = AbstractDungeon.player.getPower("EmpowerPower").amount;
+//		}
+//
+//		if(empower == 0){
+//
+//			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new EmpowerPower(this.owner, 0), 0));
+//		}
 	}
 	
 	public void stackPower(int stackAmount)
@@ -78,9 +78,11 @@ public class KiPower extends AbstractPower {
 
 		//DRAW CARDS ON KI GAIN - RESOURCEFUL THINKING
 		if (AbstractDungeon.player.hasPower("ResourcefulThinkingPower")) {
-			resourceful = AbstractDungeon.player.getPower("ResourcefulThinkingPower").amount;
-			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, resourceful));
-			AbstractDungeon.player.getPower("ResourcefulThinkingPower").flash();
+			if(stackAmount > 0) {
+				resourceful = AbstractDungeon.player.getPower("ResourcefulThinkingPower").amount;
+				AbstractDungeon.actionManager.addToBottom(new DrawCardAction(AbstractDungeon.player, resourceful));
+				AbstractDungeon.player.getPower("ResourcefulThinkingPower").flash();
+			}
 		}
 
 		//INCREASE KI LIMIT - EMPOWER

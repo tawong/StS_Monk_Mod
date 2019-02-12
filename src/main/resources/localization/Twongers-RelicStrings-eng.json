@@ -12,7 +12,7 @@
   "BrassKnuckles": {
     "NAME": "Brass Knuckles",
     "FLAVOR": "Did you really think I was fighting these Elites unarmed?",
-    "DESCRIPTIONS": ["Every time you play 3 Attacks in a single turn, heal 3 HP."]
+    "DESCRIPTIONS": ["Every time you play 3 Attacks in a single turn, heal 2 HP."]
   },
   "JadeIdol": {
     "NAME": "Jade Idol",
@@ -22,7 +22,7 @@
   "SatinRobe": {
     "NAME": "Satin Robe",
     "FLAVOR": "Tithing is hard.",
-    "DESCRIPTIONS": ["You can no longer possess gold. Lose ALL gold. At the start of each turn, gain 5 #yKi."]
+    "DESCRIPTIONS": ["You can no longer possess gold. Lose ALL gold. At the start of each combat, gain 5 #yEmpower and 10 #yKi."]
   },
   "SuspiciousFlask": {
     "NAME": "Suspicious Flask",
@@ -52,7 +52,7 @@
   "BoStaff": {
     "NAME": "Bo Staff",
     "FLAVOR": "Taken from a nasty fight with a turtle.",
-    "DESCRIPTIONS": ["Every time you play 10 Attacks, heal 5 HP"]
+    "DESCRIPTIONS": ["Every 10 attacks you play, heal 5 HP"]
   },
   "SpiritJar": {
     "NAME": "Spirit Jar",
@@ -73,5 +73,20 @@
     "NAME": "Change Purse",
     "FLAVOR": "How else are you gonna make a living?",
     "DESCRIPTIONS": ["Whenever you gain gold, gain 5 bonus gold."]
+  },
+  "Wallet": {
+    "NAME": "Wallet",
+    "FLAVOR": "This relic makes no sense",
+    "DESCRIPTIONS": ["Whenever you play an attack, gain 1 gold."]
+  },
+  "Champagne": {
+    "NAME": "Champagne",
+    "FLAVOR": "POP!",
+    "DESCRIPTIONS": ["Whenever you use a potion, gain 5 #yKi"]
+  },
+  "Celery": {
+    "NAME": "Celery",
+    "FLAVOR": "Ah, the vegetable known for absolutely nothing.",
+    "DESCRIPTIONS": ["If you do not play any cards during your turn, gain an #yArtifact next turn."]
   }
 }

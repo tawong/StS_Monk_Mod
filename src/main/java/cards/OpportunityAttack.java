@@ -24,9 +24,9 @@ public class OpportunityAttack extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 20;
+	private static final int ATTACK_DMG = 23;
 	private static final int UPGRADE_ATTACK_DMG = 5;
-	private static final int HP_LOSS = 4;
+	private static final int HP_LOSS = 2;
 
 
 	public OpportunityAttack() {

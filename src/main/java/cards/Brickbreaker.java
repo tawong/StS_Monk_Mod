@@ -26,13 +26,13 @@ public class Brickbreaker extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 8;
-	private static final int UPGRADE_ATTACK_DMG = 2;
+	private static final int ATTACK_DMG = 15;
+	private static final int UPGRADE_ATTACK_DMG = 5;
 	private static final int HP_LOSS = 4;
 
 	public Brickbreaker() {
 		super(ID, NAME, "img/cards/brickbreaker.png", COST, DESCRIPTION, CardType.ATTACK,
-				AbstractCardEnum.VIRIDIAN, CardRarity.COMMON,
+				AbstractCardEnum.VIRIDIAN, CardRarity.UNCOMMON,
 				CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.baseMagicNumber = this.magicNumber = HP_LOSS;

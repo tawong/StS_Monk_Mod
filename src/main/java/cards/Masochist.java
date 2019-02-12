@@ -17,7 +17,7 @@ public class Masochist extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int APPLY_POWER = 1;
+	private static final int APPLY_POWER = 2;
 	private static final int POWER_UPGRADE = 1;
 
 	public Masochist() {

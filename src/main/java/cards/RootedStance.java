@@ -26,7 +26,7 @@ public class RootedStance extends CustomCard {
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
 	private static final int BLOCK = 5;
-	private static final int UPGRADE_COST = 1;
+	private static final int BLOCK_UP = 3;
 
 	public RootedStance() {
 		super(ID, NAME, "img/cards/rootedstance.png", COST, DESCRIPTION, CardType.SKILL,
@@ -57,7 +57,7 @@ public class RootedStance extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeBaseCost(UPGRADE_COST);
+			upgradeBlock(BLOCK_UP);
 		}
 	}
 }

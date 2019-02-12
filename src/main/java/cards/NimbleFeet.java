@@ -25,24 +25,33 @@ public class NimbleFeet extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int BLOCK = 8;
-	private static final int BLOCK_UP = 4;
-	private static final int KI = 3;
-	private static final int KI_GAIN = 1;
+	private static final int BLOCK = 6;
+	private static final int BLOCK_UP = 3;
+	private static final int HEAL = 3;
 
 	public NimbleFeet() {
 		super(ID, NAME, "img/cards/nimblefeet.png", COST, DESCRIPTION, CardType.SKILL,
 				AbstractCardEnum.VIRIDIAN, CardRarity.UNCOMMON,
 				CardTarget.SELF);
 		this.baseBlock = this.block = BLOCK;
-		this.baseMagicNumber = this.magicNumber = KI;
+		this.baseMagicNumber = this.magicNumber = HEAL;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
-		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+//		int prepAmt = 0;
+//
+//		if(AbstractDungeon.player.hasPower("PreparationPower")){
+//			prepAmt = p.getPower("PreparationPower").amount;
+//		}
+//
+//		if(prepAmt > 0){
+			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+			AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
+//		}
 
-		AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, this.magicNumber));
+
+
 	}
 
 
@@ -55,7 +64,6 @@ public class NimbleFeet extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeBlock(BLOCK_UP);
-			upgradeMagicNumber(KI_GAIN);
 		}
 	}
 }

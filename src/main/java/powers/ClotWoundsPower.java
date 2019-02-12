@@ -39,7 +39,7 @@ public class ClotWoundsPower extends AbstractPower {
 	{
 		flash();
 
-		AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, 2));
+		AbstractDungeon.actionManager.addToBottom(new HealAction(this.owner, this.owner, this.amount));
 
 	}
 

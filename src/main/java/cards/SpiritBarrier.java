@@ -23,7 +23,7 @@ public class SpiritBarrier extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 25;
-	private static final int BLOCK = 12;
+	private static final int BLOCK = 15;
 	private static final int UPGRADE_COST = 20;
 
 	public SpiritBarrier() {

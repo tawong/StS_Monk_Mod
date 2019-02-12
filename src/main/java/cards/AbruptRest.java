@@ -19,10 +19,10 @@ public class AbruptRest extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 2;
-	private static final int BLOCK = 30;
+	private static final int BLOCK = 25;
 	private static final int PREP = 2;
 	private static final int PREP_UP = -1;
-	private static final int HP = 8;
+	private static final int HP = 12;
 
 	public AbruptRest() {
 		super(ID, NAME, "img/cards/abruptrest.png", COST, DESCRIPTION, CardType.SKILL,

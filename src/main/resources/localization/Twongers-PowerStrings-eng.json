@@ -13,7 +13,7 @@
   },
   "PsychokinesisPower": {
     "NAME": "Psychokinesis",
-    "DESCRIPTIONS": ["At the end of your turn, gain Ki equal to any remaining energy"]
+    "DESCRIPTIONS": ["At the end of your turn, gain Block equal to your Ki times #b", "."]
   },
   "PreparationPower": {
     "NAME": "Preparation",
@@ -37,7 +37,7 @@
   },
   "MasterOfPainPower": {
     "NAME": "Master Of Pain",
-    "DESCRIPTIONS": ["Your self-inflicted damage is reduced by 50%"]
+    "DESCRIPTIONS": ["You do not take damage from self-inflicted sources."]
   },
   "ClotWoundsPower": {
     "NAME": "Clotting Wounds",
@@ -46,5 +46,25 @@
   "PushThroughPower": {
     "NAME": "Pushing Through",
     "DESCRIPTIONS": ["Whenever you receive attack damage, gain #b" , " block next turn."]
+  },
+  "PrimalPower": {
+    "NAME": "Primal Form",
+    "DESCRIPTIONS": ["Whenever you gain Preparation, add #b" , " random claw attack to your hand."]
+  },
+  "QuickPower": {
+    "NAME": "Quick Shots",
+    "DESCRIPTIONS": ["Whenever you gain Preparation, deal #b" , " damage to ALL enemies."]
+  },
+  "DivinityPower": {
+    "NAME": "Divinity",
+    "DESCRIPTIONS": ["This turn, whenever you gain Preparation, gain #b" , " energy."]
+  },
+  "DilationPower": {
+    "NAME": "Dilation",
+    "DESCRIPTIONS": ["The damage dealt to you this turn is received at the end of your next turn."]
+  },
+  "DilationDamagePower": {
+    "NAME": "Dilation Damage",
+    "DESCRIPTIONS": ["You will take #b", " damage at the end of your turn"]
   }
 }

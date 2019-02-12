@@ -3,7 +3,7 @@
   "name": "Monk Character Mod",
   "author_list": ["twongers"],
   "description": "This Mod adds the Monk character to Slay the Spire.",
-  "version": "0.2",
+  "version": "0.3",
   "sts_version": "03-29-2018",
   "mts_version": "2.6.0",
   "dependencies": ["basemod"],

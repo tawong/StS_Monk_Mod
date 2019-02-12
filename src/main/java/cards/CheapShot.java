@@ -26,7 +26,7 @@ public class CheapShot extends CustomCard {
 
 	public CheapShot() {
 		super(ID, NAME, "img/cards/cheapshot.png", COST, DESCRIPTION, CardType.ATTACK,
-				AbstractCardEnum.VIRIDIAN, CardRarity.UNCOMMON,
+				AbstractCardEnum.VIRIDIAN, CardRarity.BASIC,
 				CardTarget.ENEMY);
 		this.baseDamage = ATTACK_DMG;
 		this.exhaust = true;

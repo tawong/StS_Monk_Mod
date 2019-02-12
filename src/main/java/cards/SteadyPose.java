@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import patches.AbstractCardEnum;
+import powers.EmpowerPower;
 
 public class SteadyPose extends CustomCard {
 	public static final String ID = "SteadyPose";
@@ -23,26 +24,29 @@ public class SteadyPose extends CustomCard {
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 	private static final int COST = 1;
-	private static final int ATTACK_DMG = 9;
-	private static final int UPGRADE_PLUS_DMG = 3;
+//	private static final int ATTACK_DMG = 9;
+	private static final int EMPOWER = 1;
 	private static final int BLOCK = 5;
-	private static final int UPGRADE_BLOCK = 1;
+	private static final int UPGRADE_BLOCK = 5;
+
 
 	public SteadyPose() {
 		super(ID, NAME, "img/cards/steadypose.png", COST, DESCRIPTION, CardType.ATTACK,
 				AbstractCardEnum.VIRIDIAN, CardRarity.COMMON,
-				CardTarget.ENEMY);
+				CardTarget.SELF);
 		this.baseBlock = BLOCK;
-		this.baseDamage = ATTACK_DMG;
+		this.magicNumber = this.baseMagicNumber = EMPOWER;
+		this.exhaust = true;
 	}
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
-				AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
-		if((EnergyPanel.totalCount-this.costForTurn) == 0){
-			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-		}
+
+
+		AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EmpowerPower(p, this.magicNumber), this.magicNumber));
+
+
 	}
 
 	public AbstractCard makeCopy() {
@@ -52,8 +56,7 @@ public class SteadyPose extends CustomCard {
 	public void upgrade() {
 		if (!this.upgraded) {
 			upgradeName();
-			upgradeDamage(UPGRADE_PLUS_DMG);
-//			upgradeBlock(UPGRADE_BLOCK);
+			upgradeBlock(UPGRADE_BLOCK);
 		}
 	}
 }

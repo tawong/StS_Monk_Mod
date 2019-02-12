@@ -2,6 +2,7 @@ package powers;
 
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,7 +18,7 @@ public class PsychokinesisPower extends AbstractPower {
 	public static final String NAME = powerStrings.NAME;
 	public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 	public static TextureAtlas powerAltas = new TextureAtlas("img/powers/custom_powers.atlas");
-	private int KI_UP;
+	private int KI_BLOCK;
 
 	public PsychokinesisPower(AbstractCreature owner, int amount) {
 		this.name = NAME;
@@ -37,16 +38,24 @@ public class PsychokinesisPower extends AbstractPower {
 
 	public void atEndOfTurn(boolean isPlayer)
 	{
-		flash();
-		this.KI_UP = this.amount * EnergyPanel.totalCount;
-		if (this.KI_UP != 0)
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.owner, this.owner, new KiPower(this.owner, this.KI_UP), this.KI_UP));
+		int kiAmt = 0;
 
-		AbstractDungeon.actionManager.addToBottom(new LoseEnergyAction(EnergyPanel.totalCount));
+		if (AbstractDungeon.player.hasPower("KiPower")) {
+			kiAmt = AbstractDungeon.player.getPower("KiPower").amount;
+		}
+
+		flash();
+		this.KI_BLOCK = this.amount * kiAmt;
+
+		if (this.KI_BLOCK != 0){
+
+			AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.KI_BLOCK));
+		}
+
 	}
 
 	public void updateDescription()
 	{
-		this.description = (DESCRIPTIONS[0]);
+		this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
 	}
 }

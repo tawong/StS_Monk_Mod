@@ -11,14 +11,16 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import patches.AbstractCardEnum;
+import powers.EmpowerPower;
 import powers.KiPower;
+import powers.PreparationPower;
 
 public class ExtremeFocus extends CustomCard {
 	public static final String ID = "ExtremeFocus";
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
-	private static final int COST = 0;
+	private static final int COST = 1;
 	private static final int PREP = 3;
 	private static final int PREP_UP = -1;
 
@@ -34,12 +36,17 @@ public class ExtremeFocus extends CustomCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
 		int KiAmt = 0;
-
+		int EmpAmt = 0;
+		AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PreparationPower(p, 3), 3));
 
 			if(p.hasPower("KiPower")){
 				KiAmt = p.getPower("KiPower").amount;
 				AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KiPower(p, -KiAmt), -KiAmt));
 			}
+		if(p.hasPower("EmpowerPower")){
+			EmpAmt = p.getPower("EmpowerPower").amount;
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new EmpowerPower(p, -EmpAmt), -EmpAmt));
+		}
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, this.magicNumber), this.magicNumber));
 		AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Regeneration"));
 

@@ -7,9 +7,9 @@
 		"NAME": "Not Attack",
 		"DESCRIPTION": "Next turn, the enemy does not intend to attack."
 	},
-	"Jab": {
-		"NAME": "Jab",
-		"DESCRIPTION": "Deal !D! damage. Discipline: Apply !M! Vulnerable."
+	"Wallop": {
+		"NAME": "Wallop",
+		"DESCRIPTION": "Deal !D! damage. NL This card deals double damage to enemies with Weak"
 	},
 	"Assess": {
 		"NAME": "Assess",
@@ -17,12 +17,12 @@
 	},
 	"SteadyPose": {
 		"NAME": "Steady Pose",
-		"DESCRIPTION": "Deal !D! damage. Discipline: Gain !B! Block."
+		"DESCRIPTION": "Gain !B! Block. NL Increase your Ki limit by 1 this combat. NL Exhaust"
 	},
 	"ThinkAhead": {
 		"NAME": "Think Ahead",
-		"DESCRIPTION": "Gain !M! Ki. NL Discipline: Increase your Ki limit by 2. NL Ethereal NL Exhaust",
-		"UPGRADE_DESCRIPTION": "Gain !M! Ki. NL Discipline: Increase your Ki limit by 2. NL Exhaust"
+		"DESCRIPTION": "Gain !M! Ki. NL Ethereal NL Exhaust",
+		"UPGRADE_DESCRIPTION": "Gain !M! Ki. NL Exhaust"
 	},
 	"Flurry": {
 		"NAME": "Flurry",
@@ -32,9 +32,9 @@
 		"NAME": "Controlled Strike",
 		"DESCRIPTION": "Deal !D! damage. Discipline: Gain !M! Ki."
 	},
-	"MentalFortitude": {
-		"NAME": "Mental Fortitude",
-		"DESCRIPTION": "This turn, take no damage from self-inflicted sources."
+	"Dilate": {
+		"NAME": "Dilate",
+		"DESCRIPTION": "The damage dealt to you this turn is received at the end of your next turn."
 	},
 	"AdaptiveCombat": {
 		"NAME": "Adaptive Combat",
@@ -42,7 +42,8 @@
 	},
 	"Psychokinesis": {
 		"NAME": "Psychokinesis",
-		"DESCRIPTION": "At the end of your turn, gain Ki equal to any remaining energy."
+		"DESCRIPTION": "At the end of your turn, gain Block equal to your Ki. NL (This does not consume Ki)",
+		"UPGRADE_DESCRIPTION": "At the end of your turn, gain Block equal to your Ki. NL (This does not consume Ki) NL Innate"
 	},
 	"Meditate": {
 		"NAME": "Meditate",
@@ -50,7 +51,7 @@
 	},
 	"PalmStrike": {
 		"NAME": "Palm Strike",
-		"DESCRIPTION": "Deal !D! damage, draw Ki cards"
+		"DESCRIPTION": "Deal !D! damage, draw Ki card(s)"
 	},
 	"TigerClaw": {
 		"NAME": "Tiger Claw",
@@ -74,7 +75,7 @@
 	},
 	"Cooldown": {
 		"NAME": "Cooldown",
-		"DESCRIPTION": "Exhaust your hand. NL Heal !M! HP. NL Exhaust"
+		"DESCRIPTION": "Exhaust your hand. NL Gain !M! Intangible. NL Exhaust"
 	},
 	"CripplingBlow": {
 		"NAME": "Crippling Blow",
@@ -90,11 +91,11 @@
 	},
 	"RoundhouseKick": {
 		"NAME": "Roundhouse Kick",
-		"DESCRIPTION": "Lose 4 HP. Deal !D! damage to all enemies. NL Discipline: Heal 4 HP."
+		"DESCRIPTION": "Lose 4 HP. Deal !D! damage to ALL enemies. NL Discipline: Heal 4 HP."
 	},
 	"Reposition": {
 		"NAME": "Reposition",
-		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Ki. NL Discipline: Gain !M! Ki"
+		"DESCRIPTION": "Gain !B! Block. NL Discipline: NL Lose !M! stack(s) of Preparation."
 	},
 	"EmpoweredStrikes": {
 		"NAME": "Empowered Strikes",
@@ -116,7 +117,7 @@
 	},
 	"UnrelentingStrike": {
 		"NAME": "Unrelenting Strike",
-		"DESCRIPTION": "Deal !D! Damage. NL Gain Ki x energy. NL Does not consume your Ki. NL Exhaust"
+		"DESCRIPTION": "Deal !D! Damage. NL Gain energy equal to your Ki. NL Does not consume your Ki. NL Exhaust"
 	},
 	"HammerBlow": {
 		"NAME": "Hammer Blow",
@@ -128,7 +129,7 @@
 	},
 	"Brickbreaker": {
 		"NAME": "Brickbreaker",
-		"DESCRIPTION": "Deal !D! damage, Lose 4 HP. NL Discipline: Deal !D! damage."
+		"DESCRIPTION": "Deal !D! damage, NL Lose 4 HP. NL Discipline: Deal !D! damage."
 	},
 	"AlignSelf": {
 		"NAME": "Align Self",
@@ -141,11 +142,11 @@
 	},
 	"ResourcefulThinking": {
 		"NAME": "Resourceful Thinking",
-		"DESCRIPTION": "Whenever you gain Ki, draw !M! card."
+		"DESCRIPTION": "Whenever you gain Ki, draw !M! card(s)."
 	},
 	"Transcendence": {
 		"NAME": "Transcendence",
-		"DESCRIPTION": "Gain Ki x energy. NL Draw Ki x card(s). NL Exhaust"
+		"DESCRIPTION": "Consume your Ki. Gain energy and draw card(s) equal to the Ki consumed. NL Exhaust"
 	},
 	"Empower": {
 		"NAME": "Empower",
@@ -166,7 +167,7 @@
 	},
 	"AllIn": {
 		"NAME": "All In",
-		"DESCRIPTION": "Preparation ( !M! ) NL Lose 10 HP. NL Deal !D! damage to all enemies. NL Discipline: Heal 5 HP"
+		"DESCRIPTION": "Preparation ( !M! ) NL Lose 6 HP. NL Deal !D! damage to ALL enemies."
 	},
 	"Balance": {
 		"NAME": "Balance",
@@ -174,11 +175,11 @@
 	},
 	"InnerFire": {
 		"NAME": "Inner Fire",
-		"DESCRIPTION": "Lose !M! HP. NL Deal !D! damage. NL Discipline: Gain 3 Regen."
+		"DESCRIPTION": "Lose !M! HP. NL Deal !D! damage. NL Discipline: NL Gain 1 Artifact."
 	},
 	"ForearmBlock": {
 		"NAME": "Forearm Block",
-		"DESCRIPTION": "Lose !M! HP. NL Gain !B! Block."
+		"DESCRIPTION": "Lose !M! HP. NL Gain !B! Block. NL Draw 1 card."
 	},
 	"SideKick": {
 		"NAME": "Side Kick",
@@ -190,11 +191,11 @@
 	},
 	"OpportunityAttack": {
 		"NAME": "Opportunity Attack",
-		"DESCRIPTION": "Discipline: Lose !M! HP. NL Deal !D! damage. NL Ethereal."
+		"DESCRIPTION": "Lose !M! HP. NL Discipline: NL Deal !D! damage. NL Ethereal."
 	},
 	"Masochist": {
 		"NAME": "Masochist",
-		"DESCRIPTION": "Whenever you lose HP, gain 1 Ki."
+		"DESCRIPTION": "Whenever you lose HP, gain !M! Ki."
 	},
 	"ShadowFist": {
 		"NAME": "Shadow Grasp",
@@ -214,11 +215,11 @@
 	},
 	"Overextend": {
 		"NAME": "Overextend",
-		"DESCRIPTION": "Preparation ( !M! ) NL Gain 3 energy, draw 2 cards."
+		"DESCRIPTION": "Preparation ( 3 ) NL Gain 3 energy. NL Draw !M! cards."
 	},
 	"LotusKick": {
 		"NAME": "Lotus Kick",
-		"DESCRIPTION": "Deal !D! damage Ki times to all enemies. NL Discipline: Do not consume your Ki. NL Exhaust"
+		"DESCRIPTION": "Deal !D! damage Ki times to ALL enemies. NL Discipline: Do not consume your Ki. NL Exhaust"
 	},
 	"SurgingBlow": {
 		"NAME": "Surging Blow",
@@ -239,11 +240,11 @@
 	},
 	"CalculatedStrike": {
 		"NAME": "Calculated Strike",
-		"DESCRIPTION": "Deal !D! damage. NL Discipline: Lose !M! HP NL Deal !D! damage."
+		"DESCRIPTION": "Draw !M! cards. NL Discipline: Deal !D! damage."
 	},
 	"ExtremeFocus": {
 		"NAME": "Extreme Focus",
-		"DESCRIPTION": "Preparation ( !M! ) NL Lose ALL Ki and Regen. NL Gain 3 Intangible. NL Exhaust"
+		"DESCRIPTION": "Preparation ( !M! ) NL Lose ALL Ki and Regen. Reset your Ki limit. NL Gain 3 Intangible. NL Exhaust"
 	},
 	"ShadowRestore": {
 		"NAME": "Shadow Restore",
@@ -255,7 +256,7 @@
 	},
 	"AllOrNothing": {
 		"NAME": "All Or Nothing",
-		"DESCRIPTION": "Costs 1 less for each Ki gained this combat. NL Deal 50 damage to all enemies. NL Exhaust"
+		"DESCRIPTION": "Costs 1 less for each Ki gained this combat. NL Deal 50 damage to ALL enemies. NL Exhaust"
 	},
 	"KickUp": {
 		"NAME": "Kick Up",
@@ -275,11 +276,11 @@
 	},
 	"AbruptRest": {
 		"NAME": "Abrupt Rest",
-		"DESCRIPTION": "Preparation ( !M! ) NL Gain !B! Block. NL Heal 8 HP."
+		"DESCRIPTION": "Preparation ( !M! ) NL Gain !B! Block. NL Heal 12 HP."
 	},
 	"MasterOfPain": {
 		"NAME": "Master Of Pain",
-		"DESCRIPTION": "Your self-inflicted damage is reduced by 50%"
+		"DESCRIPTION": "This combat, take no damage from self-inflicted sources. NL Gain !M! Frail."
 	},
 	"ApothicBrew": {
 		"NAME": "Apothic Brew",
@@ -291,15 +292,16 @@
 	},
 	"BraceForImpact": {
 		"NAME": "Brace For Impact",
-		"DESCRIPTION": "Gain !B! Block. Gain 3 Ki. NL Discipline: NL Preparation ( !M! ) NL Gain !B! Block."
+		"DESCRIPTION": "Preparation ( 1 ): NL Gain !M! Plated Armor. NL Exhaust",
+		"UPGRADE_DESCRIPTION": "Preparation ( 1 ): NL Gain !M! Plated Armor NL Exhaust NL Innate"
 	},
 	"Pin": {
 		"NAME": "Pin",
 		"DESCRIPTION": "Gain !B! Block. NL Gain !M! Ki. NL Discipline: Gain 2 Ki."
 	},
-	"DoubleUp": {
-		"NAME": "Double Up",
-		"DESCRIPTION": "Preparation ( !M! ) NL Deal !D! damage twice. NL Discipline: Gain 2 Ki."
+	"BadgerClaw": {
+		"NAME": "Badger Claw",
+		"DESCRIPTION": "Preparation ( !M! ) NL Remove all Block from the enemy. NL Deal !D! damage twice."
 	},
 	"PushThrough": {
 		"NAME": "Push Through",
@@ -311,7 +313,34 @@
 	},
 	"Atonement": {
 		"NAME": "Atonement",
-		"DESCRIPTION": "Lose 4 HP. NL Gain !M! Ki. NL Draw 1 Card."
+		"DESCRIPTION": "Lose 4 HP. NL Gain !M! Ki. NL Draw 1 card.",
+		"UPGRADE_DESCRIPTION": "Lose 4 HP. NL Gain !M! Ki. NL Draw 2 cards."
+	},
+	"DragonClaw": {
+		"NAME": "Dragon Claw",
+		"DESCRIPTION": "Preparation ( !M! ): NL Deal !D! Damage. NL Exhaust NL Ethereal"
+	},
+	"PrimalForm": {
+		"NAME": "Primal Form",
+		"DESCRIPTION": "Whenever you gain Preparation, add a random claw attack to your hand. NL Ethereal",
+		"UPGRADE_DESCRIPTION": "Whenever you gain Preparation, add a random claw attack to your hand."
+	},
+	"BatClaw": {
+		"NAME": "Bat Claw",
+		"DESCRIPTION": "Deal !D! Damage. NL Heal !D! HP. NL Gain !M! permanent Max HP. NL Exhaust"
+	},
+	"QuickShots": {
+		"NAME": "Quick Shots",
+		"DESCRIPTION": "Whenever you gain Preparation, deal !M! damage to ALL enemies.",
+		"UPGRADE_DESCRIPTION": "Whenever you gain Preparation, deal !M! damage to ALL enemies. NL Innate"
+	},
+	"Divinity": {
+		"NAME": "Divinity",
+		"DESCRIPTION": "This turn, whenever you gain Preparation, gain 1 energy."
+	},
+	"RecklessPursuit": {
+		"NAME": "RecklessPursuit",
+		"DESCRIPTION": "Deal !D! damage to a random enemy Ki times."
 	},
 	"Strike_M": {
 		"NAME": "Punch",

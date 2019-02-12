@@ -83,6 +83,16 @@ public class TheMonk extends CustomPlayer {
 		retVal.add("Flurry");
 		retVal.add("ControlledStrike");
 
+//		retVal.add("Wallop");
+//		retVal.add("BadgerClaw");
+//		retVal.add("SideKick");
+//		retVal.add("DragonClaw");
+//		retVal.add("PrimalForm");
+//		retVal.add("BatClaw");
+//		retVal.add("QuickShots");
+//		retVal.add("Divinity");
+
+
 		return retVal;
 	}
 	
@@ -90,6 +100,9 @@ public class TheMonk extends CustomPlayer {
 		ArrayList<String> retVal = new ArrayList<>();
 		retVal.add("SuspiciousFlask");
 		retVal.add("ImbuedPendant");
+//		retVal.add("Wallet");
+//		retVal.add("Champagne");
+//		retVal.add("Celery");
 //		retVal.add("BoStaff");
 //		retVal.add("BoxingGloves");
 //		retVal.add("BrassKnuckles");
@@ -105,6 +118,9 @@ public class TheMonk extends CustomPlayer {
 //		retVal.add("Tent");
 		UnlockTracker.markRelicAsSeen("ImbuedPendant");
 		UnlockTracker.markRelicAsSeen("SuspiciousFlask");
+//		UnlockTracker.markRelicAsSeen("Wallet");
+//		UnlockTracker.markRelicAsSeen("Champagne");
+//		UnlockTracker.markRelicAsSeen("Celery");
 		return retVal;
 	}
 

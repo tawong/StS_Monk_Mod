@@ -25,7 +25,7 @@ public class TakeABreather extends CustomCard {
 	private static final int BLOCK = 8;
 	private static final int BLOCK_UP = 4;
 	private static final int BLOCK_DIS = 3;
-	private static final int KI = 3;
+	private static final int KI = 2;
 	private static final int KI_UP = 0;
 
 	public TakeABreather() {

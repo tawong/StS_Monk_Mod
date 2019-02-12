@@ -26,6 +26,7 @@ public class Atonement extends CustomCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 	public static final String NAME = cardStrings.NAME;
 	public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+	public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 	private static final int COST = 0;
 	private static final int KI = 3;
 	private static final int UPGRADE_KI = 2;
@@ -44,7 +45,13 @@ public class Atonement extends CustomCard {
 			AbstractDungeon.actionManager.addToBottom(new VFXAction(new OfferingEffect(), 0.5F));
 			AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, HP_LOSS));
 			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new KiPower(p, this.magicNumber), this.magicNumber));
-			AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+
+			if(this.upgraded){
+				AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 2));
+			}else{
+				AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
+			}
+
 
 	}
 
@@ -58,6 +65,8 @@ public class Atonement extends CustomCard {
 		if (!this.upgraded) {
 			upgradeName();
 			upgradeMagicNumber(UPGRADE_KI);
+			rawDescription = UPGRADE_DESCRIPTION;
+			initializeDescription();
 		}
 	}
 }

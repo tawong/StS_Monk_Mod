@@ -30,7 +30,7 @@ public class ResourcefulThinking extends CustomCard {
 
 	public void use(AbstractPlayer p, AbstractMonster m) {
 
-			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ResourcefulThinkingPower(p, APPLY_POWER), APPLY_POWER));
+			AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ResourcefulThinkingPower(p, this.magicNumber), this.magicNumber));
 
 	}
 
